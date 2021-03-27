@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using products.DataAccess.Data.Repository.IRepository;
 using products.Models.ViewModels;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace panProducts.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class ServiceController : Controller
     {
